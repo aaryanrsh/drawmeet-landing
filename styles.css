@@ -304,6 +304,121 @@ header .container {
     margin-top: 0.25rem;
 }
 
+   /* Happy Users section styles */
+.happy-users {
+    padding: 4rem 2;
+    background-color: #ffffff;
+}
+
+#reviews{padding-bottom: 20px ;}
+
+.slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 90%;
+    margin: 0 1rem;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+
+}
+
+.slide-content {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+}
+
+.stars {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.star {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.25rem;
+}
+
+.review-text {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    margin-right: 0.75rem;
+}
+
+.user-details {
+    font-size: 0.875rem;
+}
+
+.user-name {
+    font-weight: 600;
+}
+
+.user-location {
+    color: #666;
+}
+
+.slider-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.slider-button {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.slider-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+}
+
+/* Responsive adjustments for the slider */
+@media (min-width: 768px) {
+    .slide {
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .slide {
+        flex: 0 0 33.333%;
+    }
+}
 /* FAQ section */
 .faq {
     padding: 4rem 0;
