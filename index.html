@@ -7,200 +7,287 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="container">
-        <div class="logo">drawmeet</div>
-        <button class="menu-toggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="nav-container">
-            <nav>
-                <a href="#about">About</a>
-                <a href="#blog">Blog</a>
-                <a href="#contact">Contact</a>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">drawmeet</a>
+            <nav class="desktop-nav">
+                <a href="#" class="button button-primary">ios</a>
+                <a href="#" class="button">android</a>
             </nav>
-            <div class="header-buttons">
-                <a href="#login" class="btn btn-secondary">Log in</a>
-                <a href="#signup" class="btn btn-primary">Sign up</a>
+            <div class="mobile-nav">
+                <a href="#" class="button button-primary">ios</a>
+                <a href="#" class="button">android</a>
             </div>
         </div>
     </header>
 
-    <section class="hero container">
-        <div class="left">
-            <h1>draw a connection</h1>
-            <p>bringing hearts closer, one sketch at a time</p>
-            <a href="#join" class="btn btn-primary">Join</a>
-            <a href="#discover" class="btn btn-secondary">Discover</a>
-        </div>
-        <div class="right">
-            <img id="hero_img" src="assets/hero.png" alt="Hero Image">
-        </div>
-    </section>
-
-    <section class="get-started">
-        <div class="container">
-            <h2>get started with drawmeet</h2>
-            <p>simply download our app and create a profile. it's quick and easy!</p>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-img"></div>
-                    <h3>Download the app</h3>
-                    <p>Get our app from your preferred app store and create your profile</p>
-                </div>
-                <div class="step">
-                    <div class="step-img"></div>
-                    <h3>Create your profile</h3>
-                    <p>Share key details about yourself and what you're looking for</p>
-                </div>
-                <div class="step">
-                    <div class="step-img"></div>
-                    <h3>Start swiping</h3>
-                    <p>Browse through profiles and find your perfect match</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="how-it-works container">
-        <h2>how it works</h2>
-        <div class="feature">
-            <div class="feature-content">
-                <h3>swipe and match</h3>
-                <p>With our app, you can easily swipe through profiles and select your potential matches. Find someone who catches your eye and spark your interest.</p>
-            </div>
-            <div class="feature-img"></div>
-        </div>
-    </section>
-
-    <section class="find-match">
-        <div class="container match-content">
-            <div class="match-img"></div>
-            <div class="match-steps">
-                <h2>find your match</h2>
-                <div class="match-step">
-                    <div class="match-step-icon"></div>
-                    <div>
-                        <h3>effortless connections</h3>
-                        <p>Swipe right on those whose art speaks to your soul</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>draw a connection</h1>
+                    <p>bringing hearts closer, one sketch at a time</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="button button-primary">ios</a>
+                        <a href="#" class="button">android</a>
                     </div>
                 </div>
-                <div class="match-step">
-                    <div class="match-step-icon"></div>
-                    <div>
-                        <h3>find your match</h3>
-                        <p>Discover potential matches who share your creative vision</p>
+                <div class="hero-image">
+                    <img src="assets/hero.png" alt="Hero illustration">
+                </div>
+            </div>
+        </section>
+
+        <!-- Get Started Section -->
+        <section class="get-started">
+            <div class="container">
+                <div class="section-header">
+                    <h2>get started with drawmeet</h2>
+                    <p>simply download our app and create a profile. it's quick and easy!</p>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-image"></div>
+                        <div class="card-content">
+                            <h3>download the app</h3>
+                            <p>get our app from your favorite app store and start your journey</p>
+                        </div>
+                    </div>
+                    <div class="card card-pink">
+                        <div class="card-image"></div>
+                        <div class="card-content">
+                            <h3>create your profile</h3>
+                            <p>make the perfect impression with your profile and preferences</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"></div>
+                        <div class="card-content">
+                            <h3>start swiping</h3>
+                            <p>browse through profiles and find your potential matches</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="testimonials container">
-        <h2>happy users</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial">
-                <div class="testimonial-header">
-                    <div class="testimonial-img"></div>
-                    <div>
-                        <h3>User Name</h3>
-                        <p>Location</p>
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="container">
+                <h2 class="section-header">how it works</h2>
+                
+                <!-- Swipe and Match -->
+                <div class="feature">
+                    <div class="feature-grid">
+                        <div class="feature-image"></div>
+                        <div class="feature-content">
+                            <h3>swipe and match</h3>
+                            <p>With our app, you can easily swipe through profiles and select your potential matches.
+                               Find someone who catches your eye and start your journey together.</p>
+                            <div class="bullet-points">
+                                <div class="bullet-point">
+                                    <div class="bullet-circle"></div>
+                                    <div>
+                                        <h4>select your favorite profiles</h4>
+                                        <p>browse through profiles and find your potential matches</p>
+                                    </div>
+                                </div>
+                                <div class="bullet-point">
+                                    <div class="bullet-circle"></div>
+                                    <div>
+                                        <h4>find your match</h4>
+                                        <p>discover potential matches that share your interests</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p>"The best dating app on the app. It's amazing!"</p>
-            </div>
-            <div class="testimonial">
-                <div class="testimonial-header">
-                    <div class="testimonial-img"></div>
-                    <div>
-                        <h3>User Name</h3>
-                        <p>Location</p>
+
+                <!-- Virtual Room Date -->
+                <div class="feature feature-pink">
+                    <div class="feature-grid">
+                        <div class="feature-image"></div>
+                        <div class="feature-content">
+                            <h3>virtual room date</h3>
+                            <p>With our app, you can easily swipe through profiles and select your potential matches.
+                               Take your connection to the next level.</p>
+                            <div class="bullet-points">
+                                <div class="bullet-point">
+                                    <h4>step 1</h4>
+                                    <p>set up your virtual room with your favorite music and ambiance</p>
+                                </div>
+                                <div class="bullet-point">
+                                    <h4>step 2</h4>
+                                    <p>invite your match and start creating your story together</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p>"The best dating app on the app. It's amazing!"</p>
-            </div>
-            <div class="testimonial">
-                <div class="testimonial-header">
-                    <div class="testimonial-img"></div>
-                    <div>
-                        <h3>User Name</h3>
-                        <p>Location</p>
+
+                <!-- Find Your Match -->
+                <div class="feature">
+                    <div class="feature-grid">
+                        <div class="feature-image"></div>
+                        <div class="feature-content">
+                            <h3>find your match</h3>
+                            <p>With our app, you can easily swipe through profiles and select your potential matches.
+                               Find someone who catches your eye and express your interests.</p>
+                            <div class="bullet-points">
+                                <div class="bullet-point">
+                                    <div class="bullet-circle"></div>
+                                    <div>
+                                        <h4>effortless connections</h4>
+                                        <p>swipe right to show interest and get instant matches</p>
+                                    </div>
+                                </div>
+                                <div class="bullet-point">
+                                    <div class="bullet-circle"></div>
+                                    <div>
+                                        <h4>find your match</h4>
+                                        <p>discover potential matches that share your interests</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p>"The best dating app on the app. It's amazing!"</p>
+
+                <!-- Find Your Charades-Compatible Match -->
+                <div class="feature">
+                    <div class="feature-content" style="text-align: center;">
+                        <h3>find your charades-compatible match</h3>
+                        <p>swipe, select & flow, and play charades to find your perfect match</p>
+                        <div class="hero-buttons">
+                            <a href="#" class="button button-primary">ios</a>
+                            <a href="#" class="button">android</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="faq container">
-        <h2>faqs</h2>
-        <div class="faq-item">
-            <div class="faq-question">How does it work?</div>
-            <div class="faq-answer">Our app allows you to easily browse profiles and connect with potential matches through creative expression.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Is it safe?</div>
-            <div class="faq-answer">We take your safety seriously and have implemented robust security measures to protect our users.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">How do I get started?</div>
-            <div class="faq-answer">Simply download our app, create a profile, and start exploring potential matches!</div>
-        </div>
-    </section>
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-header">faqs</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How does it work?</h3>
+                            <span>+</span>
+                        </div>
+                        <div class="accordion-content">
+                            Our app allows you to easily browse through profiles and select matches. When you find someone
+                            you like, you can start a conversation and get to know each other better.
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>Is it safe?</h3>
+                            <span>+</span>
+                        </div>
+                        <div class="accordion-content">
+                            We take safety very seriously. All profiles are verified and we have implemented strict
+                            security measures to protect our users.
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How much does it cost?</h3>
+                            <span>+</span>
+                        </div>
+                        <div class="accordion-content">
+                            The basic features are free to use. We also offer premium features for enhanced functionality.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="cta container">
-        <h2>get early access today!</h2>
-        <p>be the first to experience our exciting new features and updates</p>
-        <form class="cta-form">
-            <input type="email" placeholder="Enter your email">
-            <button type="submit">Subscribe</button>
-        </form>
-    </section>
+        <!-- Early Access Section -->
+        <section class="get-started">
+            <div class="container">
+                <div class="feature" style="max-width: 600px; margin: 0 auto;">
+                    <div class="feature-content">
+                        <h3>get early access today!</h3>
+                        <form class="subscribe-form">
+                            <input type="email" class="input" placeholder="Enter your email">
+                            <button type="submit" class="button button-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-column">
-                    <h3>drawmeet</h3>
-                    <ul>
+                    <h3>Logo</h3>
+                    <ul class="footer-links">
                         <li><a href="#">About us</a></li>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Works</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Contact</a></li>
                         <li><a href="#">Career</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Help</h3>
-                    <ul>
-                        <li><a href="#">Customer Support</a></li>
-                        <li><a href="#">Delivery Details</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                    <h3>Blog</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Tech</a></li>
+                        <li><a href="#">Music</a></li>
+                        <li><a href="#">Video</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="#">Free eBooks</a></li>
-                        <li><a href="#">Development Tutorial</a></li>
-                        <li><a href="#">How to - Blog</a></li>
-                        <li><a href="#">Youtube Playlist</a></li>
+                    <h3>Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Subscribe</h3>
-                    <form>
-                        <input type="email" placeholder="Enter your email">
-                        <button type="submit">Subscribe</button>
+                    <p>get updates about the latest updates</p>
+                    <form class="subscribe-form">
+                        <input type="email" class="input" placeholder="Enter your email">
+                        <button type="submit" class="button button-primary">Subscribe</button>
                     </form>
                 </div>
             </div>
-            <div class="copyright">
-                © 2024 All rights reserved
+            <div class="footer-bottom">
+                <p>© 2024 All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script>
+        // Simple accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                content.style.display = content.style.display === 'none' ? 'block' : 'none';
+                button.querySelector('span').textContent = content.style.display === 'none' ? '+' : '-';
+            });
+        });
+
+        // Initially hide all accordion content
+        document.querySelectorAll('.accordion-content').forEach(content => {
+            content.style.display = 'none';
+        });
+    </script>
+    
 </body>
 </html>
