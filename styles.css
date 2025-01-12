@@ -789,3 +789,209 @@ footer {
         font-size: 2rem;
     }
 }
+
+/* Policy Pages Styles */
+.policy-section {
+    padding: 4rem 0;
+}
+
+.policy-section h1 {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.policy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.policy-content h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.policy-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .policy-section {
+        padding: 2rem 0;
+    }
+    
+    .policy-content {
+        padding: 1.5rem;
+    }
+    
+    .policy-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Contact Page Styles */
+.contact-section {
+    padding: 4rem 0;
+}
+
+.contact-section h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.contact-content p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+.contact-form .input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    font-family: inherit;
+}
+
+.contact-form textarea.input {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form .button {
+    align-self: flex-start;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 2rem 0;
+    }
+    
+    .contact-content {
+        padding: 1.5rem;
+    }
+}
+
+/* Confirmation Message Styles */
+.confirmation-message {
+    text-align: center;
+    padding: 2rem;
+}
+
+.checkmark {
+    font-size: 4rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+    animation: scaleIn 0.5s ease-in-out;
+}
+
+.confirmation-message h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.confirmation-message p {
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.go-back-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.go-back-link:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Make the confirmation message responsive */
+@media (max-width: 768px) {
+    .confirmation-message {
+        padding: 1.5rem;
+    }
+    
+    .checkmark {
+        font-size: 3rem;
+    }
+    
+    .confirmation-message h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Additional Policy Content Styles */
+.last-updated {
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.policy-content ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.policy-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.policy-content h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Draw a Connection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">drawmeet</a>
+            <nav class="desktop-nav">
+                <a href="#" class="button button-primary">ios</a>
+                <a href="#" class="button">android</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <h1>contact us</h1>
+                <div class="contact-content">
+                    <div id="contact-form-container">
+                        <p>have a question or concern? we're here to help!</p>
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="name">name</label>
+                                <input type="text" id="name" class="input" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">email</label>
+                                <input type="email" id="email" class="input" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">message</label>
+                                <textarea id="message" class="input" placeholder="What would you like to tell us?" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="button button-primary">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div id="confirmation-message" class="confirmation-message" style="display: none;">
+                        <div class="checkmark">✓</div>
+                        <h2>message sent!</h2>
+                        <p>thank you for reaching out. we'll get back to you as soon as possible.</p>
+                        <a href="#" class="go-back-link" onclick="resetForm(event)">send another message</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Logo</h3>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Blog</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">How Drawmeet Works</a></li>
+                        <li><a href="#">Connecting With Matches</a></li>
+                        <li><a href="#">Reporting And Appeals</a></li>
+                        <li><a href="#">Read More</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Subscribe</h3>
+                    <p>get updates about the latest updates</p>
+                    <form class="subscribe-form">
+                        <input type="email" class="input" placeholder="Enter your email">
+                        <button type="submit" class="button button-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const formContainer = document.getElementById('contact-form-container');
+        const confirmationMessage = document.getElementById('confirmation-message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to your server
+            // For now, we'll just show the confirmation message
+            formContainer.style.display = 'none';
+            confirmationMessage.style.display = 'block';
+        });
+
+        function resetForm(e) {
+            e.preventDefault();
+            form.reset();
+            confirmationMessage.style.display = 'none';
+            formContainer.style.display = 'block';
+        }
+    </script>
+</body>
+</html> 
