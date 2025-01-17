@@ -1,0 +1,47 @@
+<!--
+---
+title: Post Title Here
+date: YYYY-MM-DD
+author: Author Name
+image: /blog/images/your-image.jpg
+description: A brief description of your post
+---
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title} - Drawmeet</title>
+    <meta name="description" content="{description}">
+    <link rel="stylesheet" href="../../../styles.css">
+    <style>
+        /* Copy the styles from the previous post */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/blog" class="button">← Back to Blog</a>
+        </div>
+    </header>
+
+    <main>
+        <article class="post-container">
+            <div class="post-header">
+                <h1>{title}</h1>
+                <div class="post-meta">{date} · By {author}</div>
+            </div>
+            
+            <!-- If you have a featured image -->
+            {if image}
+            <img src="{image}" alt="{title}" class="post-image">
+            {/if}
+            
+            <div class="post-content">
+                <!-- Your content here -->
+            </div>
+        </article>
+    </main>
+</body>
+</html>

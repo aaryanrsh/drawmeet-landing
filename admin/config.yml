@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: aaryanrsh/drawmeet-landing  # Replace with your actual GitHub username/repo
+  branch: main
+  auth_type: pkce
+  site_domain: https://www.drawmeet.com  # Add this line
+
+media_folder: "blog/images"
+public_folder: "/blog/images"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "blog/posts"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Content", name: "body", widget: "markdown"}

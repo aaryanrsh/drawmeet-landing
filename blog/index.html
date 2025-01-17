@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawmeet Blog</title>
+    <link rel="stylesheet" href="../styles.css">
+    <!-- Blog specific styles -->
+    <style>
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .desktop-nav,
+        .mobile-nav {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .mobile-nav {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+            .mobile-nav {
+                display: flex;
+            }
+        }
+        
+        .blog-post {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+            
+        .blog-post h2 {
+            color: #ffffff;
+            margin-top: 0;
+        }
+            
+        .post-date {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .button.button-primary {
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">drawmeet</a>
+            <nav class="desktop-nav">
+                <a href="#" class="button button-primary">ios</a>
+                <a href="#" class="button">android</a>
+            </nav>
+            <div class="mobile-nav">
+                <a href="#" class="button button-primary">ios</a>
+                <a href="#" class="button">android</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="blog-container">
+            <h1>Drawmeet Blog</h1>
+            
+            <!-- Blog Post Template -->
+            <article class="blog-post">
+                <h2>Welcome to Drawmeet Blog</h2>
+                <p class="post-date">January 16, 2025</p>
+                <p>Here's where you can share updates about Drawmeet, feature announcements, and tips for users.</p>
+                <a href="#" class="button button-primary">Read more</a>
+            </article>
+
+            <!-- First Blog Post -->
+            <article class="blog-post">
+                <h2>Welcome to Drawmeet Blog</h2>
+                <p class="post-date">January 16, 2025</p>
+                <p>We're excited to launch our blog where we'll share updates about Drawmeet, feature announcements, and tips for artists.</p>
+                <a href="/blog/posts/welcome.html" class="button button-primary">Read more</a>
+            </article>
+
+            <!-- Second Blog Post -->
+            <article class="blog-post">
+                <h2>5 Tips for Better Digital Sketching</h2>
+                <p class="post-date">January 15, 2025</p>
+                <p>Improve your digital art skills with these essential tips for better sketching in Drawmeet.</p>
+                <a href="/blog/posts/sketching-tips.html" class="button button-primary">Read more</a>
+            </article>
+
+            <!-- Third Blog Post -->
+            <article class="blog-post">
+                <h2>New Feature: Real-time Collaboration</h2>
+                <p class="post-date">January 14, 2025</p>
+                <p>Draw together with friends in real-time with our latest collaboration feature.</p>
+                <a href="/blog/posts/realtime-collab.html" class="button button-primary">Read more</a>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Logo</h3>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Blog</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">How Drawmeet Works</a></li>
+                        <li><a href="#">Connecting With Matches</a></li>
+                        <li><a href="#">Reporting And Appeals</a></li>
+                        <li><a href="{{ '/blog' | relative_url }}">Read More</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Subscribe</h3>
+                    <p>get updates about the latest updates</p>
+                    <form class="subscribe-form">
+                        <input type="email" class="input" placeholder="Enter your email">
+                        <button type="submit" class="button button-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                content.style.display = content.style.display === 'none' ? 'block' : 'none';
+                button.querySelector('span').textContent = content.style.display === 'none' ? '+' : '-';
+            });
+        });
+
+        // Initially hide all accordion content
+        document.querySelectorAll('.accordion-content').forEach(content => {
+            content.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
