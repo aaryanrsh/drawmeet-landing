@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <title>Authenticating...</title>
+</head>
+<body>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    if (code) {
+      window.opener.postMessage(
+        {
+          type: 'authorization',
+          payload: code,
+        },
+        window.location.origin
+      );
+      window.close();
+    }
+  </script>
+</body>
+</html> 
