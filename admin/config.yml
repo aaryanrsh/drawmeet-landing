@@ -2,6 +2,8 @@ backend:
   name: github
   repo: aaryanrsh/drawmeet-landing
   branch: main
+  auth_endpoint: auth
+  client_id: your_github_oauth_client_id # You'll get this from GitHub OAuth App
   base_url: https://api.github.com
   site_domain: drawmeet.com
 
@@ -9,6 +11,8 @@ backend:
 media_folder: "blog/images"
 # The src attribute for uploaded media will begin with /blog/images
 public_folder: "/blog/images"
+
+local_backend: true # Enable local backend for development
 
 collections:
   - name: "blog"
