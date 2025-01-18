@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update
+
+# Media files will be stored in the repo under blog/images
+media_folder: "blog/images"
+# The src attribute for uploaded media will begin with /blog/images
+public_folder: "/blog/images"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "blog/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Author", name: "author", widget: "string", default: "Drawmeet Team" }
+      - { label: "Body", name: "body", widget: "markdown" } 
