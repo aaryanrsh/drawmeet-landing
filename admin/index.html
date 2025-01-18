@@ -8,23 +8,5 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <script>
-    CMS.registerPreviewStyle("/styles.css");
-    
-    // Initialize the CMS
-    window.CMS_MANUAL_INIT = true;
-    CMS.init({
-      config: {
-        backend: {
-          name: 'github',
-          repo: 'aaryanrsh/drawmeet-landing',
-          branch: 'main',
-          base_url: 'https://api.github.com',
-          auth_endpoint: 'auth',
-          site_domain: 'drawmeet.com'
-        }
-      }
-    });
-  </script>
 </body>
 </html>
