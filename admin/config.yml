@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
-  branch: main # Branch to update
+  name: github
+  repo: aaryanrsh/drawmeet-landing
+  branch: main
+  base_url: https://api.github.com
+  site_domain: drawmeet.com
 
 # Media files will be stored in the repo under blog/images
 media_folder: "blog/images"
@@ -13,6 +16,7 @@ collections:
     folder: "blog/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "blog/posts/{{slug}}"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }

@@ -1,0 +1,21 @@
+title: Drawmeet Blog
+url: https://drawmeet.com
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /blog/posts/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/posts/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post" 

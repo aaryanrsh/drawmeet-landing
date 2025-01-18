@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% raw %}{{ post.title }}{% endraw %} - Drawmeet</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style>
+        .post-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .post-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .post-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .post-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 1rem;
+        }
+        
+        .post-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .post-content h2 {
+            color: #333;
+            margin-top: 2rem;
+        }
+        
+        .post-content p {
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">drawmeet</a>
+            <nav class="desktop-nav">
+                <a href="#" class="button button-primary">ios</a>
+                <a href="#" class="button">android</a>
+                <a href="/blog" class="button">blog</a>
+            </nav>
+            <div class="mobile-nav">
+                <a href="#" class="button button-primary">ios</a>
+                <a href="#" class="button">android</a>
+                <a href="/blog" class="button">blog</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article class="post-container">
+            <div class="post-header">
+                <h1>{% raw %}{{ post.title }}{% endraw %}</h1>
+                <div class="post-meta">
+                    {% raw %}{{ post.date | date: "%B %d, %Y" }} · By {{ post.author }}{% endraw %}
+                </div>
+            </div>
+            
+            {% raw %}{% if post.image %}
+            <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
+            {% endif %}{% endraw %}
+            
+            <div class="post-content">
+                {% raw %}{{ content }}{% endraw %}
+            </div>
+        </article>
+    </main>
+
+    <!-- Include your site footer here -->
+    {% raw %}{% include footer.html %}{% endraw %}
+</body>
+</html> 
