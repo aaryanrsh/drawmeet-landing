@@ -1254,13 +1254,4 @@ footer {
     margin-bottom: 2rem;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.phone-mockup img, .slider img');
-    images.forEach(img => {
-        if (!img.complete) {
-            img.addEventListener('error', function() {
-                console.error('Image failed to load:', img.src);
-            });
-        }
-    });
-});
+/* End of CSS file */
