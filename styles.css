@@ -114,26 +114,79 @@ header .container {
     display: inline-block;
     padding: 0.75rem 2rem;
     border: 2px solid black;
-    border-radius: 100px; /* Rounded corners */
-    font-weight: 600;
+    border-radius: 10px;
+    font-weight: 900;
     text-decoration: none;
     margin-right: 1rem;
     transition: transform 0.2s;
+    background: white;
+    color: white;
+    text-transform: lowercase;
+    font-size: 1.2rem;
+    box-shadow: 
+        2px 2px 0 black,
+        4px 4px 0 black;
+    text-shadow: 
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black,
+        2px 2px 0 black,
+        3px 3px 0 black,
+        4px 4px 0 black;
 }
 
 .button-primary {
-    background: black;
+    background: white;
     color: white;
 }
 
 .button:not(.button-primary) {
     background: white;
-    color: black;
+    color: white;
+}
+
+.button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 
+        4px 4px 0 black,
+        6px 6px 0 black;
+}
+
+/* Remove duplicate text shadow styles */
+.button, .button-primary {
+    color: white;
+}
+
+/* Responsive adjustments for buttons */
+@media (max-width: 768px) {
+    .button {
+        font-size: 1.1rem;
+        text-shadow: 
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 0 black,
+            2px 2px 0 black,
+            3px 3px 0 black;
+    }
 }
 
 /* Hero Section */
 .hero {
-    padding: 2rem 0;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 0 2rem;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
 .hero-content {
@@ -421,6 +474,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    max-width: 100%;
 }
 
 .input {
@@ -428,6 +482,11 @@ footer {
     padding: 0.75rem;
     border: 2px solid var(--primary-color);
     border-radius: var(--border-radius);
+}
+
+/* Footer specific subscribe form */
+.footer-column .subscribe-form {
+    max-width: 100%;
 }
 
 /* Desktop Styles */
@@ -502,6 +561,21 @@ footer {
 
     .subscribe-form {
         flex-direction: row;
+    }
+
+    /* Footer specific subscribe form should stay column */
+    .footer-column .subscribe-form {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .footer-column .input {
+        width: 100%;
+    }
+
+    .footer-column .button {
+        width: 100%;
+        margin-right: 0;
     }
 
     h1 {
@@ -673,6 +747,20 @@ footer {
     
     .card-image {
         height: 180px;
+    }
+
+    /* Footer specific subscribe form should stay column */
+    .footer-column .subscribe-form {
+        max-width: 100%;
+    }
+    
+    .footer-column .input {
+        width: 100%;
+    }
+
+    .footer-column .button {
+        width: 100%;
+        margin-right: 0;
     }
 }
 
@@ -994,4 +1082,174 @@ footer {
     font-size: 1.5rem;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
+}
+
+/* iPhone Frame Styles */
+.iphone-container {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    margin: 1rem auto;
+    padding: 20px;
+}
+
+.iphone-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 200%;
+    background: white;
+    border-radius: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border: 12px solid #1a1a1a;
+}
+
+.iphone-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 25px;
+    background: #1a1a1a;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 2;
+}
+
+.screenshot-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.screen-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.screen-slide.active {
+    opacity: 1;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Screen Captions */
+.screen-captions {
+    position: relative;
+    margin-top: 2rem;
+    height: 4rem;
+    text-align: center;
+}
+
+.screen-caption {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: lowercase;
+    margin: 0;
+    text-shadow: 
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black,
+        2px 2px 0 black,
+        3px 3px 0 black,
+        4px 4px 0 black;
+}
+
+.screen-caption.active {
+    opacity: 1;
+}
+
+/* Animation Script */
+@keyframes cycleSlides {
+    0%, 20% {
+        opacity: 0;
+        z-index: 1;
+    }
+    25%, 45% {
+        opacity: 1;
+        z-index: 2;
+    }
+    50%, 100% {
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+.screen-slide {
+    animation: cycleSlides 16s infinite;
+}
+
+.screen-caption {
+    animation: cycleSlides 16s infinite;
+}
+
+/* Set different animation delays for slides and captions */
+.screen-slide:nth-child(1), .screen-caption:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.screen-slide:nth-child(2), .screen-caption:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.screen-slide:nth-child(3), .screen-caption:nth-child(3) {
+    animation-delay: 8s;
+}
+
+.screen-slide:nth-child(4), .screen-caption:nth-child(4) {
+    animation-delay: 12s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .iphone-container {
+        max-width: 280px;
+        padding: 10px 20px; /* Equal top and bottom padding */
+    }
+    
+    .screen-caption {
+        font-size: 1.5rem;
+        text-shadow: 
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 0 black,
+            2px 2px 0 black,
+            3px 3px 0 black;
+    }
+}
+
+/* Early Access Section */
+.early-access {
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.early-access .container {
+    padding: 1.5rem 0;
+}
+
+.early-access h3 {
+    margin-bottom: 2rem;
 }
