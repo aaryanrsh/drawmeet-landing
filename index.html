@@ -31,30 +31,30 @@
                     </div>
                 </div>
                 
-                <!-- iPhone Frame with Screenshots -->
+                <!-- iPhone Frame with Screenshots - Simplified Structure -->
                 <div class="iphone-container">
                     <div class="iphone-frame">
-                        <div class="iphone-notch"></div>
                         <div class="screenshot-container">
-                            <div class="screen-slide active">
-                                <img src="assets/app-screenshot-1.png" alt="Drawmeet App Interface" class="phone-screen">
+                            <!-- Only one slide active at a time, controlled by JS -->
+                            <div class="screen-slide active" data-index="0">
+                                <img src="assets/app-screenshot-1.gif" alt="Drawmeet App Interface" class="phone-screen">
                             </div>
-                            <div class="screen-slide">
-                                <img src="assets/app-screenshot-2.png" alt="Drawmeet App Interface" class="phone-screen">
+                            <div class="screen-slide" data-index="1">
+                                <img src="assets/app-screenshot-2.gif" alt="Drawmeet App Interface" class="phone-screen">
                             </div>
-                            <div class="screen-slide">
-                                <img src="assets/app-screenshot-3.png" alt="Drawmeet App Interface" class="phone-screen">
+                            <div class="screen-slide" data-index="2">
+                                <img src="assets/app-screenshot-3.gif" alt="Drawmeet App Interface" class="phone-screen">
                             </div>
-                            <div class="screen-slide">
-                                <img src="assets/app-screenshot-4.png" alt="Drawmeet App Interface" class="phone-screen">
+                            <div class="screen-slide" data-index="3">
+                                <img src="assets/app-screenshot-4.gif" alt="Drawmeet App Interface" class="phone-screen">
                             </div>
                         </div>
                     </div>
                     <div class="screen-captions">
-                        <h3 class="screen-caption active">find who you like</h3>
-                        <h3 class="screen-caption">send a drawing</h3>
-                        <h3 class="screen-caption">send a message</h3>
-                        <h3 class="screen-caption">start chatting</h3>
+                        <h3 class="screen-caption active" data-index="0">find who you like</h3>
+                        <h3 class="screen-caption" data-index="1">send a drawing</h3>
+                        <h3 class="screen-caption" data-index="2">send a message</h3>
+                        <h3 class="screen-caption" data-index="3">start chatting</h3>
                     </div>
                 </div>
             </div>
@@ -148,6 +148,37 @@
         // Add click handlers to all download buttons
         document.querySelectorAll('.download-button').forEach(button => {
             button.addEventListener('click', handleDownload);
+        });
+
+        // Slideshow functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.screen-slide');
+            const captions = document.querySelectorAll('.screen-caption');
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+            const slideInterval = 2000; // 2 seconds per slide
+            
+            function showSlide(index) {
+                // Hide all slides and captions
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                captions.forEach(caption => {
+                    caption.classList.remove('active');
+                });
+                
+                // Show the current slide and caption
+                slides[index].classList.add('active');
+                captions[index].classList.add('active');
+            }
+            
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                showSlide(currentIndex);
+            }
+            
+            // Start the slideshow
+            setInterval(nextSlide, slideInterval);
         });
     </script>
 </body>

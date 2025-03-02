@@ -1084,7 +1084,7 @@ footer {
     margin-bottom: 1rem;
 }
 
-/* iPhone Frame Styles */
+/* iPhone Frame Styles - Updated without notch */
 .iphone-container {
     position: relative;
     width: 100%;
@@ -1104,19 +1104,6 @@ footer {
     border: 12px solid #1a1a1a;
 }
 
-.iphone-notch {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50%;
-    height: 25px;
-    background: #1a1a1a;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    z-index: 2;
-}
-
 .screenshot-container {
     position: absolute;
     top: 0;
@@ -1126,6 +1113,7 @@ footer {
     background: #fff;
 }
 
+/* Screen Slides - Simplified for JS control */
 .screen-slide {
     position: absolute;
     top: 0;
@@ -1134,10 +1122,14 @@ footer {
     height: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+    visibility: hidden;
 }
 
 .screen-slide.active {
     opacity: 1;
+    z-index: 2;
+    visibility: visible;
 }
 
 .phone-screen {
@@ -1146,12 +1138,13 @@ footer {
     object-fit: cover;
 }
 
-/* Screen Captions */
+/* Screen Captions - Simplified for JS control */
 .screen-captions {
     position: relative;
     margin-top: 2rem;
     height: 4rem;
     text-align: center;
+    overflow: hidden;
 }
 
 .screen-caption {
@@ -1160,7 +1153,8 @@ footer {
     left: 0;
     top: 0;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
     color: white;
     font-size: 2rem;
     font-weight: 900;
@@ -1178,47 +1172,7 @@ footer {
 
 .screen-caption.active {
     opacity: 1;
-}
-
-/* Animation Script */
-@keyframes cycleSlides {
-    0%, 20% {
-        opacity: 0;
-        z-index: 1;
-    }
-    25%, 45% {
-        opacity: 1;
-        z-index: 2;
-    }
-    50%, 100% {
-        opacity: 0;
-        z-index: 1;
-    }
-}
-
-.screen-slide {
-    animation: cycleSlides 16s infinite;
-}
-
-.screen-caption {
-    animation: cycleSlides 16s infinite;
-}
-
-/* Set different animation delays for slides and captions */
-.screen-slide:nth-child(1), .screen-caption:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.screen-slide:nth-child(2), .screen-caption:nth-child(2) {
-    animation-delay: 4s;
-}
-
-.screen-slide:nth-child(3), .screen-caption:nth-child(3) {
-    animation-delay: 8s;
-}
-
-.screen-slide:nth-child(4), .screen-caption:nth-child(4) {
-    animation-delay: 12s;
+    visibility: visible;
 }
 
 /* Responsive adjustments */
