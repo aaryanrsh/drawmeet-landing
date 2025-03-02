@@ -1208,4 +1208,17 @@ footer {
     margin-bottom: 2rem;
 }
 
+/* Logo Image Styles */
+.logo-image {
+    height: 37.5px;
+    width: auto;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .logo-image {
+        height: 30px;
+    }
+}
+
 /* End of CSS file */
